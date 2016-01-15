@@ -16,4 +16,5 @@ markdown: kramdown
 # Instruct Jekyll to load Bootstrap
 sass:
   # default is _sass
-  sass_dir: bower_components/bootstrap-sass/assets/stylesheets
+  # sass_dir: bower_components/bootstrap-sass/assets/stylesheets
+  sass_dir: _sass
