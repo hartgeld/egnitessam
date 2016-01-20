@@ -17,4 +17,5 @@ markdown: kramdown
 sass:
   # default is _sass
   # sass_dir: bower_components/bootstrap-sass/assets/stylesheets
-  sass_dir: _sass
+  # sass_dir: bower_components/bootstrap-sass/assets/stylesheets/bootstrap
+sass_dir: _sass

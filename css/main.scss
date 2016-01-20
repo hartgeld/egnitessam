@@ -1,10 +1,10 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 
-@import "bootstrap_styles/bootstrap";
-
+@import "bootstrap";
 
 @font-face {
     font-family: 'questaregular';
@@ -19,7 +19,7 @@
 }
 
 // Our variables
-$base-font-family: questaregular, Georgia, sans-serif;
+$base-font-family: questaregular,Georgia, serif;  
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -36,7 +36,6 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 $on-palm:          600px;
 $on-laptop:        800px;
-
 
 // Using media queries with like this:
 // @include media-query($palm) {
@@ -56,14 +55,14 @@ $on-laptop:        800px;
     width:100%;
     height:100vh;
 //    margin-bottom: -65px;
-
     background-position:center;
     background-size:cover;
     background-color: orange;
 }
 
+
 /** redefine glyph icon path **/
-$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap" !default;
+$icon-font-path: "../fonts/bootstrap" !default;
 /** navbar variables are in _variables.scss == Navbar paragraph **/
 //$navbar-default-bg:      #222 !default;
 //$navbar-default-border:  #080808 !default;
@@ -71,4 +70,3 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap" !de
 @import "base ";
 @import "layout";
 @import "syntax-highlighting";
-
