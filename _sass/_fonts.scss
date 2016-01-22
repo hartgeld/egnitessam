@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'questaregular';
+    src: url('../fonts/questa_regular_macroman/2-Questa_Regular-webfont.eot');
+    src: url('../fonts/questa_regular_macroman/2-Questa_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/questa_regular_macroman/2-Questa_Regular-webfont.woff2') format('woff2'),
+         url('../fonts/questa_regular_macroman/2-Questa_Regular-webfont.woff') format('woff'),
+         url('../fonts/questa_regular_macroman/2-Questa_Regular-webfont.ttf') format('truetype'),
+         url('../fonts/questa_regular_macroman/2-Questa_Regular-webfont.svg#questaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$icon-font-path: "../fonts/bootstrap" !default;
