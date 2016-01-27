@@ -1,9 +1,0 @@
----
-layout: post
-title:  "Fig. 5"
-date:   2015-12-30
-categories: Malerei
-image: images/04.jpg
----
-Acryl auf Leinwand.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus amus.

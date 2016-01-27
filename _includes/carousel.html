@@ -1,10 +1,41 @@
-<div id="myCarousel" class="carousel" data-interval="false">
-  <div class="carousel-inner">
-    {% for post in site.posts %}
-    <div class="item ">
-      <div class="fill" style="background-image:url({{ post.image }});z-index:-1;">
+<div class="container fill">
+  <div id="myCarousel" class="carousel slide " data-ride="carousel" data-interval="false"> <!-- data-interval="false" -->
+    <div class="carousel-inner">
+      {% for post in site.posts %}
+        <div class="item">
+          <div class="container foot">
+            <p>{{ post.title }}</p>
+          </div>
+          <div class="fill" style="background-image:url({{ post.image }});">
+          </div>          
+        </div>
+      {% endfor %}
+    </div>
+    <!-- PAGER -->
+      <div class="container foot">
+        <ol class="carousel-indicators">
+          {% for post in site.posts %}
+            <li class="pager-item" data-target="#myCarousel"></li>
+          {% endfor %}
+        </ol>
       </div>
-      <div class="container fixFoot">
+    <!-- CONTROLS -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+     <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+  <!-- PAGER -->
+  
+<!-- BACKUPS -->
+<!--
+
+<div class="foot">
         <div class="row vCenterTitle">
           <div class="col-sm-12 center-title ">
             <p>{{ post.title }}</p>
@@ -12,14 +43,14 @@
         </div>
       </div>
     </div>
+
+    {% for post in site.posts %}
+      <div class="container fixFoot">
+        <div class="row vCenterTitle">
+          <div class="col-sm-12 center-title ">
+            <p>{{ post.title }}</p>
+          </div>
+        </div>
+      </div>
     {% endfor %}
-  </div>
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-   <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+    -->
