@@ -1,24 +1,41 @@
 <div class="container fill">
-  <div id="myCarousel" class="carousel slide " data-ride="carousel" data-interval="false"> <!-- data-interval="false" -->
-    <div class="carousel-inner">
+  
+  <div id="myCarousel" class="carousel slide " data-ride="carousel" data-interval="false"> 
+    
+    <div class="carousel-inner">      
       {% for post in site.posts %}
+        
         <div class="item">
-          <div class="container foot">
-            <p>{{ post.title }}</p>
-          </div>
-          <div class="fill" style="background-image:url({{ post.image }});">
-          </div>          
+          
+            <div class="fillChild"> <!-- style="background-image:url({{ post.image }});" -->
+              <picture>
+                <source media="(orientation: landscape)" srcset="{{ post.image }}" />
+                <img src="{{ post.image_y }}" alt="landscape version" class="fillImg" />
+              </picture>
+            </div>
+
+            <div class="container info-slide">
+              <div class="row vCenterTitle">
+                <div class="col-sm-12 center-title ">
+                  <p>{{ post.title }}<br>{{ post.content }}</p>
+                </div>
+              </div>
+            </div>
+
         </div>
+
       {% endfor %}
     </div>
-    <!-- PAGER -->
-      <div class="container foot">
-        <ol class="carousel-indicators">
-          {% for post in site.posts %}
-            <li class="pager-item" data-target="#myCarousel"></li>
-          {% endfor %}
-        </ol>
-      </div>
+    
+    <!-- PAGER --> 
+    <div class="container pager">
+      <ol class="carousel-indicators">
+        {% for post in site.posts %}
+          <li class="pager-item" data-target="#myCarousel"></li>
+        {% endfor %}
+      </ol>
+    </div>
+    
     <!-- CONTROLS -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -28,29 +45,11 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+  
   </div>
 </div>
-  <!-- PAGER -->
-  
+
+
+
+
 <!-- BACKUPS -->
-<!--
-
-<div class="foot">
-        <div class="row vCenterTitle">
-          <div class="col-sm-12 center-title ">
-            <p>{{ post.title }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {% for post in site.posts %}
-      <div class="container fixFoot">
-        <div class="row vCenterTitle">
-          <div class="col-sm-12 center-title ">
-            <p>{{ post.title }}</p>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-    -->

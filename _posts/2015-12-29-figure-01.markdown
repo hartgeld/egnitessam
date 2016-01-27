@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Fig. 6"
+title:  "Figure 6"
 date:   2015-12-29
 categories: Malerei
 image: images/05.jpg
+image_y: images/05_y.jpg
 ---
 Acryl auf Leinwand.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus muss.

@@ -35,16 +35,22 @@ html,body{
 .carousel-inner{height:100%;}
 
 .fill {
-    width:100%;
     height:100%;
+}
 
-    background-position:center;
-    background-size:contain;
-    background-color: background-color;
-    background-repeat: no-repeat;
+.fillChild {
 
-    padding-top: 100px;
-    padding-bottom: 100px;
+    position: absolute;
+    top:$carousel-margin;
+    bottom:$carousel-margin;
+    left: $carousel-margin;
+    right: $carousel-margin;
+}
+
+.fillImg {
+height: 100%;
+width: 100%;
+object-fit: contain;   
 }
 
 .container {
@@ -53,16 +59,19 @@ html,body{
 
 .head {
     position:absolute;
-    height:100px;
+    height:$carousel-margin;
 }
 
-.foot {
+.info-slide {
     position: absolute;
-    height:100px;         
+    bottom:0;
+    left: 0;
+    right: 0;
+    height: $carousel-margin;      
 }
 
 .center-title{
-        text-align: center;
+    text-align: center;
 }
 .vCenterTitle{
     position: relative;
@@ -70,12 +79,28 @@ html,body{
     transform: translateY(-50%);
 }
 
+//pager container
+.pager {
+    margin: 0;
+}
+
 //set pager styles
 .carousel-indicators li{
-    border: 1px solid black;
+    border: 1px solid $grey-color;
+    width: 5px;
+    height: 5px;
+    margin: 0;
+    list-style-type: square;
 }
 .carousel-indicators .active{
-    background-color: black;
+    background-color: $grey-color;
+    width:5px;
+    height:5px;
+        list-style-type: square;
+
+}
+
+.italic{
 }
 
 /* keep full widget on smaller screens */

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Fig. 3"
+title:  "Figure 3"
 date:   2016-02-01
 categories: Malerei
 image: images/02.jpg
+image_y: images/02_y.jpg
 ---
 Acryl auf Leinwand.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
