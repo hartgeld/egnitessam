@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Figure 1"
-date:   2016-02-03
+date:   2016-01-03 00:00:00
 categories: Malerei
 image: images/00.jpg
 image_y: images/00_y.jpg

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Figure 5"
-date:   2015-12-30
+date:   2015-12-30 00:00:00
 categories: Malerei
 image: images/04.jpg
 image_y: images/04_y.jpg
