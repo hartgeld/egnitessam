@@ -6,4 +6,5 @@ categories: Malerei
 image: images/05.jpg
 image_y: images/05_y.jpg
 ---
-Acryl auf Leinwand.
+> Acryl auf Leinwand 
+> 85 x 60 cm, 2015

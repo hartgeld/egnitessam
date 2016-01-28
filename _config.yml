@@ -1,10 +1,14 @@
 # Site settings
 title: Egnitessam
 email: egnitessam@gmail.com
+
 description: > # this means to ignore newlines until "baseurl:"
     Hallo. Das ist ein kurzer, aber prägnanter Text über mich und den Inhalt dieser Seite in maximal drei Sätzen.
+
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://egnitessam.ddns.net" # the base hostname & protocol for your site
+
+# url: "http://egnitessam.ddns.net" # the base hostname & protocol for your site
+
 twitter_username: 
 github_username:  
 
