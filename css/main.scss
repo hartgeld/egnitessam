@@ -24,6 +24,7 @@
 
 h1{
     font-size: 20px;
+    color: $text-color;
 }
 
 //carousel fullscreen
@@ -43,8 +44,8 @@ html,body{
     position: absolute;
     top:$carousel-margin;
     bottom:$carousel-margin;
-    left: $carousel-margin;
-    right: $carousel-margin;
+    left: $carousel-margin/2;
+    right: $carousel-margin/2;
 }
 
 .fillImg {
@@ -58,8 +59,10 @@ object-fit: contain;
 }
 
 .head {
+    z-index: 2048;
     position:absolute;
     height:$carousel-margin;
+    top:0;
 }
 
 .info-slide {
@@ -81,26 +84,48 @@ object-fit: contain;
 
 //pager container
 .pager {
+    position: absolute;
+    top:0.00%;
     margin: 0;
+    height: $carousel-margin;
+    list-style-type: square;
+
 }
 
-//set pager styles
-.carousel-indicators li{
-    border: 1px solid $grey-color;
-    width: 5px;
-    height: 5px;
-    margin: 0;
+.pager-item {
     list-style-type: square;
 }
+
+
+//set pager styles
+.carousel-indicators {
+    //text-align: center;
+    //margin-left: $carousel-margin/2;
+    //left: 0;
+    //bottom:-10px;
+    list-style-type: square;
+
+}
+.carousel-indicators li{
+    border: 1px solid $text-color;
+    width: 4px;
+    height: 4px;
+    margin: 0;
+    list-style-type: square;
+
+}
 .carousel-indicators .active{
-    background-color: $grey-color;
-    width:5px;
-    height:5px;
-        list-style-type: square;
+    background-color: $text-color;
+    width:4px;
+    height:4px;
+    list-style-type: square;
+
 
 }
 
-.italic{
+//style inline-txt "title"
+.postTitle{
+    font-style: italic;
 }
 
 /* keep full widget on smaller screens */

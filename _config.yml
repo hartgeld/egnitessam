@@ -1,5 +1,5 @@
 # Site settings
-title: Egnitessam
+title: egnitessam
 email: egnitessam@gmail.com
 
 description: > # this means to ignore newlines until "baseurl:"
@@ -17,7 +17,5 @@ markdown: kramdown
 
 # Instruct Jekyll to load Bootstrap
 sass:
-  # default is _sass
-  # sass_dir: bower_components/bootstrap-sass/assets/stylesheets
-  # sass_dir: bower_components/bootstrap-sass/assets/stylesheets/bootstrap
+
 sass_dir: _sass

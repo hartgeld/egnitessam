@@ -3,21 +3,22 @@
   <div id="myCarousel" class="carousel slide " data-ride="carousel" data-interval="false"> 
     
     <div class="carousel-inner">      
+      
       {% for post in site.posts %}
         
         <div class="item">
           
-            <div class="fillChild"> <!-- style="background-image:url({{ post.image }});" -->
+            <div class="fillChild">
               <picture>
                 <source media="(orientation: landscape)" srcset="{{ post.image }}" />
-                <img src="{{ post.image_y }}" alt="landscape version" class="fillImg" />
+                <img src="{{ post.image_y }}" alt="my img" class="fillImg" />
               </picture>
             </div>
 
             <div class="container info-slide">
               <div class="row vCenterTitle">
                 <div class="col-sm-12 center-title ">
-                  <h1>{{ post.title }}</h1> {{ post.content }}
+                  <p> {{ post.title }} {{"  |  "}} <span class="postTitle"> {{ post.material | append: ", " | append: post.size | append: ", "| append: post.year }} </span> </p>
                 </div>
               </div>
             </div>
@@ -25,9 +26,9 @@
         </div>
 
       {% endfor %}
+
     </div>
     
-    <!-- PAGER --> 
     <div class="container pager">
       <ol class="carousel-indicators">
         {% for post in site.posts %}
@@ -36,17 +37,18 @@
       </ol>
     </div>
     
-    <!-- CONTROLS -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
      <span class="sr-only">Previous</span>
     </a>
+    
     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
   
   </div>
+
 </div>
 
 
