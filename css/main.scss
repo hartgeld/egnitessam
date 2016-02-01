@@ -62,7 +62,7 @@ object-fit: contain;
     z-index: 2048;
     position:absolute;
     height:$carousel-margin;
-    top:0;
+    margin-top: -8px;
 }
 
 .info-slide {
@@ -73,6 +73,7 @@ object-fit: contain;
     height: $carousel-margin;      
 }
 
+//center vertical & horizontal
 .center-title{
     text-align: center;
 }
@@ -85,47 +86,82 @@ object-fit: contain;
 //pager container
 .pager {
     position: absolute;
-    top:0.00%;
+    top:0;
     margin: 0;
+    margin-top: 8px;
+    padding: 0;
     height: $carousel-margin;
     list-style-type: square;
-
 }
-
-.pager-item {
-    list-style-type: square;
-}
-
 
 //set pager styles
 .carousel-indicators {
-    //text-align: center;
-    //margin-left: $carousel-margin/2;
-    //left: 0;
-    //bottom:-10px;
     list-style-type: square;
-
 }
 .carousel-indicators li{
     border: 1px solid $text-color;
-    width: 4px;
-    height: 4px;
-    margin: 0;
+    width: $pager-size;
+    height: $pager-size;
+    margin: auto;
     list-style-type: square;
-
 }
 .carousel-indicators .active{
+    border: 2px solid $text-color;
     background-color: $text-color;
-    width:4px;
-    height:4px;
-    list-style-type: square;
-
-
+    width:$pager-size;
+    height:$pager-size;
+    list-style-type: square; 
 }
 
 //style inline-txt "title"
-.postTitle{
+.postInfo{
     font-style: italic;
+}
+.nowrap{
+    white-space: nowrap
+}
+
+//modal styles
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+#myModal .modal-dialog{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+}
+.modal-backdrop {
+    background-color: $text-color;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.modal-backdrop.fade.in {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+.modal-content {
+    background: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    min-height: 100% !important;
+}
+.modal-header{
+    margin-top: -8px;
+}
+
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity $fade-speed linear;
+      -moz-transition: opacity $fade-speed linear;
+       -ms-transition: opacity $fade-speed linear;
+        -o-transition: opacity $fade-speed linear;
+           transition: opacity $fade-speed linear;
 }
 
 /* keep full widget on smaller screens */

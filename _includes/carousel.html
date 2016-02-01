@@ -1,6 +1,6 @@
 <div class="container fill">
   
-  <div id="myCarousel" class="carousel slide " data-ride="carousel" data-interval="false"> 
+  <div id="myCarousel" class="carousel slide " data-ride="carousel" data-interval="false" data-keyboard="true"> 
     
     <div class="carousel-inner">      
       
@@ -18,7 +18,20 @@
             <div class="container info-slide">
               <div class="row vCenterTitle">
                 <div class="col-sm-12 center-title ">
-                  <p> {{ post.title }} {{"  |  "}} <span class="postTitle"> {{ post.material | append: ", " | append: post.size | append: ", "| append: post.year }} </span> </p>
+                  <p> 
+                    <span class="nowrap">
+                      {{ post.title }} 
+                    </span>
+                    {{"  |  "}} 
+                    <span class="postInfo"> 
+                      <span class="nowrap">
+                        {{ post.material | append: ", " }} 
+                      </span>
+                      <span class="nowrap">
+                        {{ post.size | append: ", " | append: post.year }} 
+                      </span>
+                    </span> 
+                  </p>
                 </div>
               </div>
             </div>
@@ -29,14 +42,15 @@
 
     </div>
     
+
     <div class="container pager">
-      <ol class="carousel-indicators">
-        {% for post in site.posts %}
-          <li class="pager-item" data-target="#myCarousel"></li>
-        {% endfor %}
-      </ol>
+        <ol class="carousel-indicators vCenterTitle" >
+          {% for post in site.posts %}
+            <li class="pager-item" data-target="#myCarousel"></li>
+          {% endfor %}
+        </ol>
     </div>
-    
+
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
      <span class="sr-only">Previous</span>
