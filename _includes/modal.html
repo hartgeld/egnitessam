@@ -6,18 +6,24 @@
         <div class="modal-content">
 
           <!-- Header -->
-          <div class="modal-header">
-
+          <a href="#myModal" data-keyboard="true" data-toggle="modal">
+            <div class="container head bottomBorder">
               <div class="row vCenterTitle">
                 <div class="center-title ">
-                    <h1 >{{ site.title }}</h1>
+                    <h1 class="negativ">{{ site.title }}</h1>
                 </div>
               </div>
-
-          </div>
-              
-          <!-- Body Modal -->
-          <div class="modal-body">
+            </div>
+          </a>
+          
+          <div class="container fill">
+            <div class="modalInfoText negativ">
+              <div class="row">
+                <div class="col-sm-3 col-sm-offset-2">
+                  {{ site.description }}
+                </div>
+              </div>
+            </div>
           </div>
 
       </div>

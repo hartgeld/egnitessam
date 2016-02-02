@@ -59,10 +59,10 @@ object-fit: contain;
 }
 
 .head {
-    z-index: 2048;
+    z-index: 1;
     position:absolute;
     height:$carousel-margin;
-    margin-top: -8px;
+    margin-top: 0;
 }
 
 .info-slide {
@@ -112,10 +112,33 @@ object-fit: contain;
     height:$pager-size;
     list-style-type: square; 
 }
+//carousel control styles
+.carouselControlIcon{
+    font-size: 50px;
+    color: $text-color;
+    background-color: white;
+    text-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
 
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+
+    margin: 0 auto; 
+}
+.carousel-control {
+    opacity: 1.0;
+}
 //style inline-txt "title"
 .postInfo{
+    font-weight: 400;
     font-style: italic;
+}
+.postTitle{
+    font-weight: 700;
+    font-style: normal;
 }
 .nowrap{
     white-space: nowrap
@@ -151,7 +174,12 @@ object-fit: contain;
     min-height: 100% !important;
 }
 .modal-header{
-    margin-top: -8px;
+  margin: 0 auto;
+    padding: 0px;
+    height: 100%;
+}
+.bottomBorder{
+    border-bottom: 1px solid #e5e5e5;
 }
 
 
@@ -163,7 +191,12 @@ object-fit: contain;
         -o-transition: opacity $fade-speed linear;
            transition: opacity $fade-speed linear;
 }
-
+.negativ{
+color:white;
+}
+.modalInfoText{
+    margin-top:$carousel-margin - $carousel-margin/4;
+}
 /* keep full widget on smaller screens */
 @media (max-width: 767px) { 
     body {

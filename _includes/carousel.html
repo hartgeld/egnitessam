@@ -20,15 +20,19 @@
                 <div class="col-sm-12 center-title ">
                   <p> 
                     <span class="nowrap">
-                      {{ post.title }} 
+                      <span class="current_item"></span>/<span class="items_length"></span>&emsp;
+                      <span class="postTitle">
+                        {{ post.title }} 
+                      </span>
                     </span>
-                    {{"  |  "}} 
+                    &emsp;
                     <span class="postInfo"> 
                       <span class="nowrap">
-                        {{ post.material | append: ", " }} 
+                        {{ post.material }} 
                       </span>
+                      &emsp;
                       <span class="nowrap">
-                        {{ post.size | append: ", " | append: post.year }} 
+                        {{ post.size | append: "&emsp;" | append: post.year }} 
                       </span>
                     </span> 
                   </p>
@@ -42,23 +46,16 @@
 
     </div>
     
-
-    <div class="container pager">
-        <ol class="carousel-indicators vCenterTitle" >
-          {% for post in site.posts %}
-            <li class="pager-item" data-target="#myCarousel"></li>
-          {% endfor %}
-        </ol>
-    </div>
-
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-     <span class="sr-only">Previous</span>
+      <div class="vCenterTitle">
+        <span class="carouselControlIcon"><</span>
+      </div>
     </a>
     
     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <div class="vCenterTitle">
+        <span class="carouselControlIcon">></span>
+      </div>
     </a>
   
   </div>
@@ -69,3 +66,21 @@
 
 
 <!-- BACKUPS -->
+<!-- 
+ <div class="container pager">
+        <ol class="carousel-indicators vCenterTitle" >
+          {% for post in site.posts %}
+            <li class="pager-item" data-target="#myCarousel"></li>
+          {% endfor %}
+        </ol>
+    </div>
+ -->
+ <!--
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+
+<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+-->
+
+      
