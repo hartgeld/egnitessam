@@ -191,12 +191,23 @@ object-fit: contain;
         -o-transition: opacity $fade-speed linear;
            transition: opacity $fade-speed linear;
 }
-.negativ{
+.invert{
 color:white;
 }
-.modalInfoText{
-    margin-top:$carousel-margin - $carousel-margin/4;
+.modalInfoText{    
+    position: absolute;
+    top:$carousel-margin + $carousel-margin/2;
+    //bottom:0;
+    left: 0;
+    right: 0;
 }
+.modalItemList{
+}
+.previewImg{
+    object-fit: cover;
+}
+
+
 /* keep full widget on smaller screens */
 @media (max-width: 767px) { 
     body {

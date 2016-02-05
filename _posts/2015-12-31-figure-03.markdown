@@ -5,6 +5,7 @@ date:   2015-12-31 00:00:00
 categories: Malerei
 image: images/03.jpg
 image_y: images/03_y.jpg
+image_xs: images/03.jpg 
 material: Acryl auf Leinwand
 size: 85x60cm
 year: 2015
