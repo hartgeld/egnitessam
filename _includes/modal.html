@@ -5,38 +5,134 @@
       <div class="modal-dialog nopadding">
         <div class="modal-content">
 
-          <!-- Header -->
-          <a href="#myModal" data-keyboard="true" data-toggle="modal">
-            <div class="container head bottomBorder">
-              <div class="row vCenterTitle">
-                <div class="center-title ">
-                    <h1 class="invert">{{ site.title }}</h1>
+          <div class="container head"> 
+
+            <div class="row vCenterTitle">
+
+              <div class="col-xs-6 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-4">
+
+                <div class="center-title" style="">
+                    <h1 >
+                      <span class="postTitle invert">
+                        {{ site.title }}
+                      </span>
+                  </h1>
                 </div>
-              </div>
+
             </div>
-          </a>
+
+            <div class="col-xs-3 col-sm-2 col-md-1">
+
+                <div class="center-title ">
+                    <h1 >
+                      <span class="invert" style="text-decoration:line-through;">index</span>
+                  </h1>
+                </div>
+
+            </div>
+
+            <div class="col-xs-3 col-sm-2 col-md-1">
+                <div class="center-title ">
+                    <h1 >
+                      <span class="invert">kontakt</span>
+                  </h1>
+                </div>
+
+            </div>
+
+            </div>
+          </div>
+
+          <div class="container head"> 
+            <div class="row" style="height:100%; border-bottom: 1px solid white;">
+
+              <a href="{{ site.baseurl }}/" data-dismiss="modal">
+                <div class="col-xs-6 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-4" style="height:100%; border-left: 1px solid white; border-right: 1px solid white;  border-bottom: 1px solid white;">
+                </div>
+              </a>
+          
+              <a href="#myModal" data-keyboard="true" data-toggle="modal">
+                <div class="col-xs-3 col-sm-2 col-md-1" style="height:100%; border-right: 1px solid white; border-bottom: 1px solid white;">
+                </div>
+              </a>
+
+              <a href="mailto:egnitessam@gmail.com">
+                <div class="col-xs-3 col-sm-2 col-md-1" style="height:100%; border-right: 1px solid white; border-bottom: 1px solid white;">
+                </div>
+              </a>
+
+            </div>
+          </div>
           
           <div class="container modalInfoText">
             
             <div class="row bottomBorder" style="padding-bottom:50px;">
-              <div class="col-xs-offset-0 col-sm-offset-2 col-md-offset-3 col-lg-offset-4 col-xs-12 col-sm-8 col-md-6 col-lg-4">
+              <div class="col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 col-xs-12 col-sm-8 col-md-5 col-lg-4">
                   <p class="invert">{{ site.description }}</p>
               </div>
             </div>
 
-            <div class="row modalItemList">
+            <div class="row">
               <div class="col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 col-xs-12 col-sm-10 col-md-8 col-lg-6">
-                {% for post in site.posts %}
-                <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
-                  <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 nopadding">
-                    <div class="previewImg">
-                      <picture>
-                        <img src="{{ post.image_xs }}" alt="my img preview" />
-                      </picture>
-                    </div>
-                  </div>
-                </a>
-                {% endfor %}
+
+                <table class="table table-condensed table-responsive table-hover">
+                  <thead class="">
+                    <tr class="invert ">
+                      <th></th>
+                      <th>Titel</th>
+                      <th>Material</th>
+                      <th>Maße</th>
+                      <th>Jahr</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    {% for post in site.posts %}
+
+                        <tr>
+
+                          <td>
+                            <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
+                                <div class="previewImg ">
+                                  <picture>
+                                    <img src="{{ post.image_xs }}" alt="my img preview" class ="modalItemList"/>
+                                  </picture>
+                                </div>
+                            </a>
+                          </td>
+
+                          <td>
+                            <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
+                              <p class="invert" >{{ post.title }}</p>
+                            </a>
+                          </td>
+
+                          <td>
+                            <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
+                              <p class="invert">{{ post.material }}</p>
+                            </a>
+                          </td>
+
+                          <td>
+                            <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
+                              <p class="invert">{{ post.size }}</p>
+                            </a>
+                          </td>
+
+                          <td>
+                            <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
+                              <p class="invert">{{ post.year }}</p>
+                            </a>
+                          </td>
+
+                        </tr>
+       
+                    {% endfor %}
+
+                  </tbody>
+                </table>   
+
               </div>
             </div>
 
