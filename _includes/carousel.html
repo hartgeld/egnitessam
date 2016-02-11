@@ -1,4 +1,4 @@
-<div class="container fill">
+<div class="container fill nopadding gradient">
   
   <div id="myCarousel" class="carousel slide " data-ride="carousel" data-interval="false" data-keyboard="true"> 
     
@@ -8,19 +8,29 @@
         
         <div class="item">
           
-            <div class="fillChild">
-              <picture>
-                <source media="(orientation: landscape)" srcset="{{ post.image }}" />
-                <img src="{{ post.image_y }}" alt="my img" class="fillImg" />
-              </picture>
+          <div class="container fill">
+            <div class="row fill">
+              <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-10 col-sm-10 col-md-10 fill">
+                <div class="fillChild">
+                  <picture>
+                    <source media="(orientation: landscape)" srcset="{{ post.image }}" />
+                    <img src="{{ post.image_y }}" alt="my img" class="fillImg" />
+                  </picture>
+                </div>
+              </div>
             </div>
+          </div>
 
             <div class="container info-slide">
               <div class="row vCenterTitle">
-                <div class="col-sm-12 center-title ">
+
+                <div class=" col-xs-1 col-sm-1 col-md-1 col-lg-1 center-title" style="padding-left:0; padding-right:0;" >
+                  <span class="current_item"></span>/<span class="items_length"></span>
+                </div>
+
+                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 center-title ">
                   <p> 
                     <span class="nowrap">
-                      <span class="current_item"></span>/<span class="items_length"></span>&emsp;
                       <span class="postTitle">
                         {{ post.title }} 
                       </span>
@@ -40,24 +50,44 @@
               </div>
             </div>
 
+            <div class="container info-slide" >
+              <div class="row fill">
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1  fill pagina" style=""></div>
+                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 fill">
+                </div>
+
+              </div>
+            </div>
+
         </div>
 
       {% endfor %}
 
     </div>
     
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <div class="vCenterTitle">
-        <span class="carouselControlIcon"><</span>
+    <div class="container fill pagersPos">
+      <div class="row fill" >
+
+        <a class="left" href="#myCarousel" role="button" data-slide="prev">
+          <div class="col-xs-1 col-sm-1 nopadding pagerLeft ">
+              <div class="vCenterTitle">
+                <span class="carouselControlIcon"><</span>
+              </div>
+          </div>
+         </a>
+
+        <a class="right" href="#myCarousel" role="button" data-slide="next">
+          <div class="col-xs-offset-11 col-xs-1  col-sm-offset-11 col-sm-1 col-md-offset-11 col-md-1 col-lg-offset-11 col-lg-1 pagerRight ">
+            
+              <div class="vCenterTitle">
+                <span class="carouselControlIcon">></span>
+              </div>
+          </div>
+        </a>
+
       </div>
-    </a>
-    
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <div class="vCenterTitle">
-        <span class="carouselControlIcon">></span>
-      </div>
-    </a>
-  
+    </div>
+
   </div>
 
 </div>

@@ -23,7 +23,7 @@
 }
 
 h1{
-    font-size: 20px;
+    font-size: $base-font-size;
     color: $text-color;
 }
 
@@ -42,10 +42,12 @@ html,body{
 .fillChild {
 
     position: absolute;
-    top:$carousel-margin;
-    bottom:$carousel-margin;
-    left: $carousel-margin/2;
-    right: $carousel-margin/2;
+    top:$carousel-margin*1.25;
+    bottom:$carousel-margin*1.25;
+    left:$carousel-margin*0.25;
+    right:$carousel-margin*0.25;
+    //left: $carousel;
+    //right: $carousel;
 }
 
 .fillImg {
@@ -66,7 +68,7 @@ object-fit: contain;
 }
 
 .info-slide {
-    border-top: 1px solid black;
+    border-top: 1px solid $background-color;
     position: absolute;
     bottom:0;
     left: 0;
@@ -115,19 +117,12 @@ object-fit: contain;
 }
 //carousel control styles
 .carouselControlIcon{
-    font-size: 50px;
+    font-size: $base-font-size*2;
     color: $text-color;
-    background-color: white;
-    text-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
-
+    width: 100%;
     display: block;
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
-    -moz-border-radius: 30px; /* or 50% */
-    border-radius: 30px; /* or 50% */
-
     margin: 0 auto; 
+    text-align: center;
 }
 .carousel-control {
     opacity: 1.0;
@@ -150,6 +145,9 @@ object-fit: contain;
    padding: 0 !important;
    margin: 0 !important;
 }
+.nomargin{
+   margin: 0 ;
+}
 #myModal .modal-dialog{
   width: 100%;
   height: 100%;
@@ -157,7 +155,7 @@ object-fit: contain;
   background-color: transparent;
 }
 .modal-backdrop {
-    background-color: $text-color;
+    background-color: $background-color;
 }
 .modal-backdrop.fade {
     opacity: 0;
@@ -245,6 +243,105 @@ tr > td > .menuItem:hover {
         padding-left: 0;
         padding-right: 0;
     }
+}
+
+.pagersPos{
+    position:absolute; 
+    top: 0;
+}
+.pagerLeft{
+    border-right: 1px solid $background-color;
+
+    background:rgba(255,255,255,0.1);  
+  -webkit-transition: background .5s ease-out;
+     -moz-transition: background .5s ease-out;
+       -o-transition: background .5s ease-out;
+          transition: background .5s ease-out;
+
+    position: absolute;
+    top:$carousel-margin;
+    bottom:$carousel-margin;
+
+}
+.pagerRight{
+    border-left: 1px solid $background-color; 
+
+    background:rgba(255,255,255,0.1);  
+  -webkit-transition: background .5s ease-out;
+     -moz-transition: background .5s ease-out;
+       -o-transition: background .5s ease-out;
+          transition: background .5s ease-out;
+
+    position: absolute;
+    top:$carousel-margin;
+    bottom:$carousel-margin;
+
+}
+.pagerLeft:hover{
+    background-color: rgba(255,255,255,0.35);
+}
+.pagerRight:hover{
+    background-color: rgba(255,255,255,0.35);
+}
+
+/* head styles */
+.headBg{
+    border-bottom: 1px solid $background-color;
+}
+.homeBg{
+    border-right: 1px solid $background-color;
+    border-left: 1px solid $background-color;
+
+    background:rgba(255,255,255,0.1);  
+  -webkit-transition: background .5s ease-out;
+     -moz-transition: background .5s ease-out;
+       -o-transition: background .5s ease-out;
+          transition: background .5s ease-out;
+}
+.homeBg:hover{
+    background-color: rgba(255,255,255,0.35);
+}
+
+.indexBg{
+    border-right: 1px solid $background-color;
+
+    background:rgba(255,255,255,0.1);  
+  -webkit-transition: background .5s ease-out;
+     -moz-transition: background .5s ease-out;
+       -o-transition: background .5s ease-out;
+          transition: background .5s ease-out;
+}
+.indexBg:hover{
+    background-color: rgba(255,255,255,0.35);
+}
+
+.contactBg{
+    border-right: 1px solid $background-color;
+    background:rgba(255,255,255,0.1);  
+  -webkit-transition: background .5s ease-out;
+     -moz-transition: background .5s ease-out;
+       -o-transition: background .5s ease-out;
+          transition: background .5s ease-out;
+}
+.contactBg:hover{
+    background-color: rgba(255,255,255,0.35);
+}
+
+/* Background Vignette Gradient */
+.gradient{
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1, rgba(0,0,0,0) $bgOpacity_2, rgba(0,0,0,1) $bgOpacity_3, rgba(0,0,0,1) $bgOpacity_4); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($bgOpacity_1,rgba(0,0,0,0)), color-stop($bgOpacity_2,rgba(0,0,0,0)), color-stop($bgOpacity_3,rgba(0,0,0,1)), color-stop($bgOpacity_4,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.pagina{
+    border-right: 1px solid $background-color;
+    padding-left: 0;
+    padding-right:0;
 }
 
 @import "base";
