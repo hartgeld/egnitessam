@@ -1,25 +1,35 @@
 
 
     <div id="myModalAbout" class="modal modal-fullscreen fade gradient" tabindex='-1'> <!--class="fade" -->
-      <div class="modal-dialog nopadding fill">
+      <div class="modal-dialog nopadding fill container">
         <div class="modal-content modalContentBg fill">
 
           {% include header_modal_info.html %}
-          <!--
-          <div class="container modalInfoText">
-            {{ site.description }}
+          
+          <div class="container modalInfoText nopadding modalFooterParent">
             
-            <div class="row bottomBorder" style="padding-bottom:50px;">
-              <div class="col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 col-xs-12 col-sm-8 col-md-5 col-lg-4">
-              -->
-                  <!--<p class=""></p>-->
-              <!--
+            <div class="row modalMarginParent">
+              <div class=" hidden-xs col-sm-1 col-md-1 col-lg-1 modalMargin infoBg infoBgLeft nopadding" style="left:26px;">
+              </div>
+              <div class="col-xs-1 col-sm-2 col-md-3 col-lg-4">
+              </div>
+              <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4 paddingPfusch tableHeadIndex">
+                <p class="">{{ site.description }}</p>
+              </div>
+              <div class="col-xs-1 col-sm-2 col-md-3 col-lg-4">
+              </div>
+              <div class=" hidden-xs col-sm-1 col-md-1 col-lg-1 modalMargin infoBg infoBgRight" style="right: 26px;">
               </div>
             </div>
 
+            <div class="row modalFooter container nomargin nopadding">
+            </div>
+
+            <div class="row modalFooterChild">
+            </div>
 
           </div>
--->
+
       </div>
     </div>
   </div>

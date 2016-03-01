@@ -1,0 +1,74 @@
+
+    <div id="myModal" class="modal modal-fullscreen fade gradient" tabindex='-1' > <!--class="fade" -->
+      <div class="modal-dialog nopadding">
+        <div class="modal-content">
+
+          {% include header_modal_index.html %}
+          
+          <div class="container modalInfoText nopadding modalFooterParent">
+            <div class="row modalMarginParent">
+              <div class=" hidden-xs col-sm-1 col-md-1 col-lg-1 modalMargin infoBg infoBgLeft nopadding" style="left:13px;">
+              </div>
+              <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 paddingPfusch tableHeadIndex">
+                <table class="table table-condensed table-responsive table-hover nomargin ">
+                  <thead class="">
+                    <tr class=" ">
+                      <th></th>
+                      <th>Titel</th>
+                      <th>Material</th>
+                      <th>Maße</th>
+                      <th>Jahr</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    {% for post in site.posts %}
+
+                        <tr>
+                          <td class="preventLinebreak">
+                            <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
+                                <div class="previewImg ">
+                                  <picture>
+                                    <img src="{{ post.image_xs }}" alt="my img preview" class ="modalItemList"/>
+                                  </picture>
+                                </div>
+                            </a>
+                          </td>
+                          <td class="preventLinebreak">
+                            <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
+                              <p class="" >{{ post.title }}</p>
+                            </a>
+                          </td>
+                          <td class="preventLinebreak">
+                            <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
+                              <p class="">{{ post.material }}</p>
+                            </a>
+                          </td>
+                          <td class="preventLinebreak">
+                            <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
+                              <p class="">{{ post.size }}</p>
+                            </a>
+                          </td>
+                          <td class="preventLinebreak">
+                            <a class="menuItem" href="#myCarousel" data-slide-to="{{ forloop.index0 }}" data-dismiss="modal" onclick="">
+                              <p class="">{{ post.year }}</p>
+                            </a>
+                          </td>
+                        </tr>
+       
+                    {% endfor %}
+
+                  </tbody>
+                </table>   
+              </div>
+              <div class=" hidden-xs col-sm-1 col-md-1 col-lg-1 modalMargin infoBg infoBgRight" style="right: 13px;">
+              </div>           
+            </div>
+            <div class="row modalFooter container nomargin nopadding">
+            </div>
+            <div class="row modalFooterChild">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
