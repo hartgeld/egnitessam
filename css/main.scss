@@ -22,14 +22,14 @@
     }
 }
 
-h1{
-    font-size: $base-font-size;
-    color: $text-color;
-}
-
 //carousel fullscreen
 html,body{
   height:100%;
+}
+
+h1{
+  font-size: $base-font-size;
+  color: $text-color;
 }
 
 .carousel,.item,.active{height:100%;}
@@ -40,20 +40,17 @@ html,body{
 }
 
 .fillChild {
-
     position: absolute;
     top:$carousel-margin*1.25;
     bottom:$carousel-margin*1.25;
     left:$carousel-margin*0.25;
     right:$carousel-margin*0.25;
-    //left: $carousel;
-    //right: $carousel;
 }
 
 .fillImg {
-height: 100%;
-width: 100%;
-object-fit: contain;   
+  height: 100%;
+  width: 100%;
+  object-fit: contain;   
 }
 
 .container {
@@ -115,6 +112,7 @@ object-fit: contain;
     height:$pager-size;
     list-style-type: square; 
 }
+
 //carousel control styles
 .carouselControlIcon{
     font-size: $base-font-size*2;
@@ -127,6 +125,7 @@ object-fit: contain;
 .carousel-control {
     opacity: 1.0;
 }
+
 //style inline-txt "title"
 .postInfo{
     font-weight: 400;
@@ -195,10 +194,15 @@ color:white;
 }
 .modalInfoText{    
     position: absolute;
-    top:$carousel-margin + $carousel-margin/2;
-    //bottom:0;
+    top:$carousel-margin;
     left: 0;
     right: 0;
+    bottom:0;
+}
+.modalContentBg{
+  background:rgba(255,255,255,0.35); 
+  bottom:0;
+
 }
 
 // Table styles
@@ -231,7 +235,13 @@ table {
           transition: background .5s ease-out;
 }
 .table-hover > tbody > tr:hover{
-    background-color: rgba(255,255,255,0.25);
+    background-color: rgba(0,0,0,0.35);
+}
+.table-hover > tbody > tr:hover p{
+    color: $background-color;
+}
+.table-hover > tbody > tr p{
+    color: $text-color;
 }
 tr > td > .menuItem:hover {
         text-decoration: none;
@@ -252,7 +262,7 @@ tr > td > .menuItem:hover {
 .pagerLeft{
     border-right: 1px solid $background-color;
 
-    background:rgba(255,255,255,0.1);  
+    background:rgba(255,255,255,0.35);  
   -webkit-transition: background .5s ease-out;
      -moz-transition: background .5s ease-out;
        -o-transition: background .5s ease-out;
@@ -266,7 +276,7 @@ tr > td > .menuItem:hover {
 .pagerRight{
     border-left: 1px solid $background-color; 
 
-    background:rgba(255,255,255,0.1);  
+    background:rgba(255,255,255,0.35);  
   -webkit-transition: background .5s ease-out;
      -moz-transition: background .5s ease-out;
        -o-transition: background .5s ease-out;
@@ -278,10 +288,16 @@ tr > td > .menuItem:hover {
 
 }
 .pagerLeft:hover{
-    background-color: rgba(255,255,255,0.35);
+    background-color: rgba(0,0,0,0.35);
+}
+.pagerLeft:hover .carouselControlIcon {
+    color: $background-color;
 }
 .pagerRight:hover{
-    background-color: rgba(255,255,255,0.35);
+    background-color: rgba(0,0,0,0.35);
+}
+.pagerRight:hover .carouselControlIcon {
+    color: $background-color;
 }
 
 /* head styles */
@@ -292,40 +308,58 @@ tr > td > .menuItem:hover {
     border-right: 1px solid $background-color;
     border-left: 1px solid $background-color;
 
-    background:rgba(255,255,255,0.1);  
+    background:rgba(255,255,255,0.35);  
   -webkit-transition: background .5s ease-out;
      -moz-transition: background .5s ease-out;
        -o-transition: background .5s ease-out;
           transition: background .5s ease-out;
 }
 .homeBg:hover{
-    background-color: rgba(255,255,255,0.35);
+    background-color: rgba(0,0,0,0.35);
+}
+.homeBg:hover h1 {
+    color: $background-color;
 }
 
 .indexBg{
     border-right: 1px solid $background-color;
 
-    background:rgba(255,255,255,0.1);  
+    background:rgba(255,255,255,0.35);  
   -webkit-transition: background .5s ease-out;
      -moz-transition: background .5s ease-out;
        -o-transition: background .5s ease-out;
           transition: background .5s ease-out;
 }
+.indexBgActive{
+  border-right: 1px solid $background-color;
+  background:rgba(0,0,0,0.35);
+}
+.indexBgActive h1{
+  color: $background-color;
+}
 .indexBg:hover{
-    background-color: rgba(255,255,255,0.35);
+    background-color: rgba(0,0,0,0.35);
+}
+.indexBg:hover h1 {
+    color: $background-color;
 }
 
 .contactBg{
     border-right: 1px solid $background-color;
-    background:rgba(255,255,255,0.1);  
+    background:rgba(255,255,255,0.35);  
   -webkit-transition: background .5s ease-out;
      -moz-transition: background .5s ease-out;
        -o-transition: background .5s ease-out;
           transition: background .5s ease-out;
 }
 .contactBg:hover{
-    background-color: rgba(255,255,255,0.35);
+    background-color: rgba(0,0,0,0.35);
 }
+.contactBg:hover h1 {
+    color: $background-color;
+}
+
+
 
 /* Background Vignette Gradient */
 .gradient{
@@ -339,9 +373,13 @@ tr > td > .menuItem:hover {
 }
 
 .pagina{
+    background:rgba(255,255,255,0.35);
     border-right: 1px solid $background-color;
     padding-left: 0;
     padding-right:0;
+}
+.infoBg{
+  background:rgba(255,255,255,0.35);
 }
 
 @import "base";

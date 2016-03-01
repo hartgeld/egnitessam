@@ -1,21 +1,22 @@
 
-<nav> 
-
-    <div id="myModal" class="modal modal-fullscreen fade gradient" tabindex='-1'> <!--class="fade" -->
+    <div id="myModal" class="modal modal-fullscreen fade gradient" tabindex='-1' > <!--class="fade" -->
       <div class="modal-dialog nopadding">
-        <div class="modal-content">
+        <div class="modal-content modalContentBg">
 
-          {% include header.html %}
+          {% include header_modal.html %}
           
           <div class="container modalInfoText">
             
+            <!--
             <div class="row bottomBorder" style="padding-bottom:50px;">
               <div class="col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 col-xs-12 col-sm-8 col-md-5 col-lg-4">
-                  <p class="">{{ site.description }}</p>
+              -->
+                  <!--<p class="">{{ site.description }}</p>-->
+              <!--
               </div>
-            </div>
+            </div>-->
 
-            <div class="row">
+            <div class="row ">
               <div class="col-xs-offset-0 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 col-xs-12 col-sm-10 col-md-8 col-lg-6">
 
                 <table class="table table-condensed table-responsive table-hover">
@@ -84,5 +85,3 @@
       </div>
     </div>
   </div>
-
-</nav> 
