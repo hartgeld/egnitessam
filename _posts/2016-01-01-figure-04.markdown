@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Figure 3"
+title:  "Bizarre Bahnen I, II & III"
 date:   2016-01-01 00:00:00
 categories: Malerei
 image: images/02.jpg
 image_y: images/02_y.jpg
 image_xs: images/02.jpg
 material: Acryl auf Leinwand
-size: 85x60cm
-year: 2015
+size: 24x30cm
+year: Februar 2011
 ---

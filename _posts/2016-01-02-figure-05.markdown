@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Figure 2"
+title:  "Der Magier"
 date:   2016-01-02 00:00:00
 categories: Malerei
 image: images/01.jpg
 image_y: images/01_y.jpg
 image_xs: images/01.jpg
 material: Acryl auf Leinwand
-size: 85x60cm
-year: 2015
+size: 24x30cm
+year: Mai 2010
 ---

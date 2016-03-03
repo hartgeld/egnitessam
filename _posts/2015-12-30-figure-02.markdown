@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Figure 5"
+title:  "High Flames"
 date:   2015-12-30 00:00:00
 categories: Malerei
 image: images/04.jpg
 image_y: images/04_y.jpg
 image_xs: images/04.jpg
 material: Acryl auf Leinwand
-size: 85x60cm
-year: 2015
+size: 24x30cmcm
+year: Mai 2014
 ---

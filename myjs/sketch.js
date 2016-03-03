@@ -8,7 +8,7 @@ var sketch = function( p ) {
   var easing = 0.09;
 
   p.setup = function() {
-    p.createCanvas(p.windowWidth-15, p.windowHeight-15);
+    p.createCanvas(p.windowWidth, p.windowHeight);
   };
 
   p.draw = function() {
@@ -47,7 +47,7 @@ var navSketch = function( p ) {
 
 window.onload = function() {
   
-  var containerNode = document.getElementById( 'myStage' );
+  var containerNode = document.getElementById( 'myCanvas' );
   var myp5 = new p5(sketch, containerNode);
 /*
   var containerNodeNav = document.getElementById( 'myNav' );

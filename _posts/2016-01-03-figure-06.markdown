@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Figure 1"
+title:  "Bizarre Bahnen IV"
 date:   2016-01-03 00:00:00
 categories: Malerei
 image: images/00.jpg
 image_y: images/00_y.jpg
 image_xs: images/00.jpg
 material: Acryl auf Leinwand
-size: 85x60cm
-year: 2015
+size: 24x30cm
+year: Juli 2009
 ---

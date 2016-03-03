@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Figure 6"
+title:  "Legende"
 date:   2015-12-29 00:00:00
 categories: Malerei
 image: images/05.jpg
 image_y: images/05_y.jpg
 image_xs: images/05.jpg
 material: Acryl auf Leinwand
-size: 85x60cm
-year: 2015
+size: 24x30cm
+year: November 2014
 ---
