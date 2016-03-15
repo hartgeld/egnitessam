@@ -4,6 +4,9 @@
 
 @charset "utf-8";
 
+/* //////////////////// */
+/* imports */
+/* //////////////////// */
 @import "bootstrap";
 @import "fonts";
 @import "_myVariables";
@@ -20,7 +23,33 @@
         @content;
     }
 }
-
+/* //////////////////// */
+/* Basic styling */
+/* //////////////////// */
+/* Reset basic elements */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+body {
+    //font-family: $base-font-family;
+    font-family: 'M+ P Type-1 (basic latin) Regular';
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    //font-weight: 300;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+}
+/* Set `margin-bottom` to maintain vertical rhythm */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
 /* keep full widget on smaller screens */
 @media (max-width: 767px) { 
     body {
@@ -29,7 +58,9 @@
     }
 }
 
+/* //////////////////// */
 // GENERAL 
+/* //////////////////// */
 html,body{
   height:100%;
 }
@@ -39,49 +70,29 @@ html,body{
 .container {
   width: 100%;
 }
+.nowrap{
+  white-space: nowrap
+}
+.nopadding {
+  padding: 0 !important;
+}
+.nomargin{
+  margin: 0 ;
+}
+.invert{
+  color:white;
+}
+/* //////////////////// */
 // TYPE
+/* //////////////////// */
 h1{
   font-size: $base-font-size;
   color: $text-color;
 }
 
-// CAROUSEL
-.carousel,.item,.active{height:100%;}
-.carousel-inner{height:100%;}
-
-.fillChild {
-  position: absolute;
-  top:$carousel-margin*1.25;
-  bottom:$carousel-margin*1.25;
-  left:$carousel-margin*0.25;
-  right:$carousel-margin*0.25;
-}
-
-.fillImg {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;   
-}
-
-
-
-.head {
-  z-index: 1;
-  position:absolute;
-  height:$carousel-margin;
-  margin-top: 0;
-}
-
-.info-slide {
-  border-top: 1px solid $background-color;
-  position: absolute;
-  bottom:0;
-  left: 0;
-  right: 0;
-  height: $carousel-margin;
-}
-
-//center vertical & horizontal
+/* //////////////////// */
+/* center vertical & horizontal */
+/* //////////////////// */
 .center-title{
   text-align: center;
 }
@@ -91,17 +102,142 @@ h1{
   transform: translateY(-50%);
 }
 
-//pager container
-.pager {
-  position: absolute;
-  top:0;
-  margin: 0;
-  margin-top: 8px;
-  padding: 0;
-  height: $carousel-margin;
-  list-style-type: square;
+/* //////////////////// */
+/* header styles */
+/* //////////////////// */
+.head {
+  z-index: 1;
+  position:absolute;
+  height:$carousel-margin;
+  margin-top: 0;
+}
+.headBg{
+  border-bottom: 1px solid $background-color;
+}
+.fillLogo{
+  //height: 150px;
+  //width: 35px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  object-fit: cover;   
 }
 
+/* header nav 'home' */
+.homeBg{
+  border-right: 1px solid $background-color;
+  border-left: 1px solid $background-color;
+
+  background:rgba(255,255,255,0.35);  
+  -webkit-transition: background .5s ease-out;
+     -moz-transition: background .5s ease-out;
+       -o-transition: background .5s ease-out;
+          transition: background .5s ease-out;
+}
+.homeBg:hover{
+  background-color: rgba(255,255,255,0.35);
+}
+.homeBg:hover h1 {
+  color: $background-color;
+}
+
+/* header nav 'index' */
+.indexBg{
+  border-right: 1px solid $background-color;
+  background:rgba(255,255,255,0.35);  
+  -webkit-transition: background .5s ease-out;
+     -moz-transition: background .5s ease-out;
+       -o-transition: background .5s ease-out;
+          transition: background .5s ease-out;
+}
+.indexBgActive{
+  border-right: 1px solid $background-color;
+  background:rgba(0,0,0,0.35);
+}
+.indexBgActive h1{
+  color: $background-color;
+}
+.indexBg:hover{
+    background-color: rgba(0,0,0,0.35);
+}
+.indexBg:hover h1 {
+  color: $background-color;
+}
+
+/* header nav 'info' */
+.infoBg{
+  background:rgba(255,255,255,0.35);
+}
+.infoBgLeft{
+  border-right: 1px solid $background-color;
+}
+.infoBgRight{
+  border-left: 1px solid $background-color;
+}
+
+/* header nav 'contact' */
+.contactBg{
+  border-right: 1px solid $background-color;
+  background:rgba(255,255,255,0.35);  
+  -webkit-transition: background .5s ease-out;
+     -moz-transition: background .5s ease-out;
+       -o-transition: background .5s ease-out;
+          transition: background .5s ease-out;
+}
+.contactBg:hover{
+  background-color: rgba(0,0,0,0.35);
+}
+.contactBg:hover h1 {
+  color: $background-color;
+}
+//Glyphicons
+.glyphicon{
+  color: $text-color;
+  font-size: $base-font-size +5;
+}
+
+/* //////////////////// */
+// carousel
+/* //////////////////// */
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+.fillChild {
+  position: absolute;
+  top:$carousel-margin*1.25;
+  bottom:$carousel-margin*1.25;
+  left:$carousel-margin*0.25;
+  right:$carousel-margin*0.25;
+}
+.fillImg {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;   
+}
+// info section carousel
+.info-slide {
+  border-top: 1px solid $background-color;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  right: 0;
+  height: $carousel-margin;
+}
+//style inline-txt "title"
+.postInfo{
+  font-weight: 400;
+  font-style: italic;
+}
+.postTitle{
+  font-weight: 700;
+  font-style: normal;
+}
+/* pagina */
+.pagina{
+  background:rgba(255,255,255,0.35);
+  border-right: 1px solid $background-color;
+  padding-left: 0;
+  padding-right:0;
+}
 //set pager styles
 .carousel-indicators {
   list-style-type: square;
@@ -120,7 +256,6 @@ h1{
   height:$pager-size;
   list-style-type: square; 
 }
-
 //carousel control styles
 .carouselControlIcon{
   font-size: $base-font-size*2;
@@ -133,143 +268,16 @@ h1{
 .carousel-control {
   opacity: 1.0;
 }
-
-//style inline-txt "title"
-.postInfo{
-  font-weight: 400;
-  font-style: italic;
-}
-.postTitle{
-  font-weight: 700;
-  font-style: normal;
-}
-.nowrap{
-  white-space: nowrap
-}
-
-//modal styles
-.nopadding {
-  padding: 0 !important;
-}
-.nomargin{
-  margin: 0 ;
-}
-#myModal .modal-dialog{
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  background-color: transparent;
-}
-#myModalAbout .modal-dialog{
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  background-color: transparent;
-}
-.modal-backdrop {
-  background-color: $background-color;
-}
-.modal-backdrop.fade {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-.modal-backdrop.fade.in {
-  opacity: 1.0;
-  filter: alpha(opacity=100);
-}
-.modal-content {
-  background: transparent;
-  border: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  min-height: 100% !important;
-}
-.modal-header{
-  margin: 0 auto;
-  padding: 0px;
-  height: 100%;
-}
-.bottomBorder{
-    border-bottom: 1px solid #e5e5e5;
-}
-.fade {
-    opacity: 0;
-    -webkit-transition: opacity $fade-speed linear;
-      -moz-transition: opacity $fade-speed linear;
-       -ms-transition: opacity $fade-speed linear;
-        -o-transition: opacity $fade-speed linear;
-           transition: opacity $fade-speed linear;
-}
-.invert{
-  color:white;
-}
-.modalInfoText{    
-  position: absolute;
-  top:$carousel-margin;
-  left: 0;
-  right: 0;
-  bottom:0;
-}
-.modalContentBg{
-  background:rgba(255,255,255,0.35); 
-}
-
-// Table styles
-.modalItemList{
-  height: $base-font-size*3;
-}
-.menuItem{
-  line-height: $base-font-size*3;
-}
-.previewImg{
-  object-fit: cover;
-}
-.table > thead > tr > th {
-  border-bottom: 1px solid $background-color;
-}
-.table > tbody > tr > th, .table > tbody > tr > td{
-  border-top-color: $background-color;
-}
-
-.table > thead > tr > th {
-  line-height: $base-font-size*3;
-}
-table {
-  width: 100%;
-}
-.table-hover > tbody > tr{
-  background:rgba(255,255,255,0.0);
-  
-  -webkit-transition: background .5s ease-out;
-     -moz-transition: background .5s ease-out;
-       -o-transition: background .5s ease-out;
-          transition: background .5s ease-out;
-}
-.table-hover > tbody > tr:hover{
-    background-color: rgba(0,0,0,0.35);
-}
-.table-hover > tbody > tr:hover p{
-    color: $background-color;
-}
-.table-hover > tbody > tr p{
-    color: $text-color;
-}
-tr > td > .menuItem:hover {
-        text-decoration: none;
-}
-.tableHeadIndex{
-  padding-top: $base-font-size*3;
-  padding-bottom: $base-font-size*3;
-}
-.preventLinebreak{
-  white-space: nowrap;
-}
-th {
-  font-size: 13px;
-}
-
-
 // Pager styles
+.pager {
+  position: absolute;
+  top:0;
+  margin: 0;
+  margin-top: 8px;
+  padding: 0;
+  height: $carousel-margin;
+  list-style-type: square;
+}
 .pagersPos{
   position:absolute; 
   top: 0;
@@ -313,7 +321,44 @@ th {
     color: $background-color;
 }
 
-// modal styles general
+/* //////////////////// */
+// modal styles
+/* //////////////////// */
+#myModal .modal-dialog{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+}
+#myModalAbout .modal-dialog{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+}
+.modal-backdrop {
+  background-color: $background-color;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.fade.in {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+.modal-content {
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  min-height: 100% !important;
+}
+.modal-header{
+  margin: 0 auto;
+  padding: 0px;
+  height: 100%;
+}
 .modalMargin{
   -webkit-flex: 0 0 1;  /* Safari 6.1+ */
   -ms-flex: 0 0 1;  /* IE 10 */ 
@@ -334,98 +379,42 @@ th {
   padding-left: 13px;
   padding-right: 13px;
 }
+.bottomBorder{
+    border-bottom: 1px solid #e5e5e5;
+}
+/*
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity $fade-speed linear;
+      -moz-transition: opacity $fade-speed linear;
+       -ms-transition: opacity $fade-speed linear;
+        -o-transition: opacity $fade-speed linear;
+           transition: opacity $fade-speed linear;
+}
+*/
+.modal.fade .modal-dialog 
+{
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
 
-/* header nav styles */
-.headBg{
-  border-bottom: 1px solid $background-color;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
 }
-/* header nav 'home' */
-.homeBg{
-  border-right: 1px solid $background-color;
-  border-left: 1px solid $background-color;
-
-  background:rgba(255,255,255,0.35);  
-  -webkit-transition: background .5s ease-out;
-     -moz-transition: background .5s ease-out;
-       -o-transition: background .5s ease-out;
-          transition: background .5s ease-out;
+.modalInfoText{    
+  position: absolute;
+  top:$carousel-margin;
+  left: 0;
+  right: 0;
+  bottom:0;
 }
-.homeBg:hover{
-  background-color: rgba(0,0,0,0.35);
+.modalContentBg{
+  background:rgba(255,255,255,0.35); 
 }
-.homeBg:hover h1 {
-  color: $background-color;
-}
-
-/* header nav 'index' */
-.indexBg{
-  border-right: 1px solid $background-color;
-  background:rgba(255,255,255,0.35);  
-  -webkit-transition: background .5s ease-out;
-     -moz-transition: background .5s ease-out;
-       -o-transition: background .5s ease-out;
-          transition: background .5s ease-out;
-}
-.indexBgActive{
-  border-right: 1px solid $background-color;
-  background:rgba(0,0,0,0.35);
-}
-.indexBgActive h1{
-  color: $background-color;
-}
-.indexBg:hover{
-    background-color: rgba(0,0,0,0.35);
-}
-.indexBg:hover h1 {
-  color: $background-color;
-}
-
-/* header nav 'info' */
-
-.infoBg{
-  background:rgba(255,255,255,0.35);
-}
-.infoBgLeft{
-  border-right: 1px solid $background-color;
-}
-.infoBgRight{
-  border-left: 1px solid $background-color;
-}
-/* header nav 'contact' */
-.contactBg{
-  border-right: 1px solid $background-color;
-  background:rgba(255,255,255,0.35);  
-  -webkit-transition: background .5s ease-out;
-     -moz-transition: background .5s ease-out;
-       -o-transition: background .5s ease-out;
-          transition: background .5s ease-out;
-}
-.contactBg:hover{
-  background-color: rgba(0,0,0,0.35);
-}
-.contactBg:hover h1 {
-  color: $background-color;
-}
-
-/* Background Vignette Gradient */
-.gradient{
-  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1, rgba(0,0,0,0) $bgOpacity_2, rgba(0,0,0,1) $bgOpacity_3, rgba(0,0,0,1) $bgOpacity_4); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($bgOpacity_1,rgba(0,0,0,0)), color-stop($bgOpacity_2,rgba(0,0,0,0)), color-stop($bgOpacity_3,rgba(0,0,0,1)), color-stop($bgOpacity_4,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* IE10+ */
-  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
-/* pagina */
-.pagina{
-  background:rgba(255,255,255,0.35);
-  border-right: 1px solid $background-color;
-  padding-left: 0;
-  padding-right:0;
-}
-
 /* modal footer */
 .modalFooterParent{
   display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
@@ -439,7 +428,6 @@ th {
   flex-direction: column;
 }
 .modalFooterChild{
-
   background:rgba(255,255,255,0.35);
   -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1; /* OLD - Firefox 19- */
@@ -453,16 +441,83 @@ th {
   height: $carousel-margin;
 }
 
+/* //////////////////// */
+// Table styles
+/* //////////////////// */
+.modalItemList{
+  height: $base-font-size*3;
+}
+.menuItem{
+  line-height: $base-font-size*3;
+}
+.previewImg{
+  object-fit: cover;
+}
+.table > thead > tr > th {
+  border-bottom: 1px solid $background-color;
+}
+.table > tbody > tr > th, .table > tbody > tr > td{
+  border-top-color: $background-color;
+}
+.table > thead > tr > th {
+  line-height: $base-font-size*3;
+}
+table {
+  width: 100%;
+}
+.table-hover > tbody > tr{
+  background:rgba(255,255,255,0.0);
+  
+  -webkit-transition: background .5s ease-out;
+     -moz-transition: background .5s ease-out;
+       -o-transition: background .5s ease-out;
+          transition: background .5s ease-out;
+}
+.table-hover > tbody > tr:hover{
+    background-color: rgba(0,0,0,0.35);
+}
+.table-hover > tbody > tr:hover p{
+    color: $background-color;
+}
+.table-hover > tbody > tr p{
+    color: $text-color;
+}
+tr > td > .menuItem:hover {
+        text-decoration: none;
+}
+.tableHeadIndex{
+  padding-top: $base-font-size*3;
+  padding-bottom: $base-font-size*3;
+}
+.preventLinebreak{
+  white-space: nowrap;
+}
+th {
+  font-size: 13px;
+}
 
+/* //////////////////// */
+/* Background Vignette Gradient */
+/* //////////////////// */
+.gradient{
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) $bgOpacity_1, rgba(0,0,0,0) $bgOpacity_2, rgba(0,0,0,1) $bgOpacity_3, rgba(0,0,0,1) $bgOpacity_4); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($bgOpacity_1,rgba(0,0,0,0)), color-stop($bgOpacity_2,rgba(0,0,0,0)), color-stop($bgOpacity_3,rgba(0,0,0,1)), color-stop($bgOpacity_4,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) $bgOpacity_1,rgba(0,0,0,0) $bgOpacity_2,rgba(0,0,0,1) $bgOpacity_3,rgba(0,0,0,1) $bgOpacity_4); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 // canvas bg p5.js
 #myCanvas{
   z-index: -1;
-  position: fixed;
-  top: 0;
-  left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  //position: fixed;
+  //top: 0;
+  //left: 0;
 }
 
-
-@import "base";
+//@import "base";
 //@import "layout";
 //@import "syntax-highlighting";
